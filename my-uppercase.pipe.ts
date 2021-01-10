@@ -6,13 +6,13 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class MyUppercasePipe implements PipeTransform {
 
   transform(value: string, amount: number, replacement: string): string {
-    let newTitle = '';
+    let ntitle = '';
     if (value.length > amount) {
-      newTitle = value.substr(0, amount - replacement.length) + replacement;
+      ntitle = value.substr(0, amount - replacement.length) + replacement;
     } else {
-      newTitle += value;
+      ntitle += value;
     }
-    return newTitle;
+    return ntitle;
 
   }
 }
