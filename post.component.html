@@ -1,0 +1,10 @@
+<h2>Napis blog</h2>
+  <form (ngSubmit)="posts()">
+    <input [(ngModel)]="title" type="text" name="title" >
+    <textarea [(ngModel)]="text" type="text" name="text" ></textarea>
+    <button>post</button>
+  </form>
+<div *ngFor="let blogpost of blogPosts">
+    <p>{{blogpost.title | myUppercase:6:".."}} || {{blogpost.title | myUppercase:40:".."}}</p>
+    <p>{{blogpost.text}}</p>
+</div>
